@@ -1,0 +1,187 @@
+/* gitlight: status */
+
+.gitlight-status .merge-conflict li button:first-child {
+  background-color: #ca2d2d;
+  font-weight: bold;
+}
+
+.gitlight-status .staged li button:first-child {
+  background-color: #216a36;
+  font-weight: bold;
+}
+
+.gitlight-status .not-staged li button:first-child {
+  background-color: #6a6721;
+  font-weight: bold;
+}
+
+.gitlight-status .untracked li button:first-child {
+  background-color: #21626a;
+  font-weight: bold;
+}
+
+.gitlight-status .not-staged li button.checkout {
+  margin-left: 32px;
+  background-color: #6a2f21;
+}
+
+.gitlight-status .untracked li button.delete {
+  margin-left: 32px;
+  background-color: #6a2f21;
+}
+
+.commit-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  color: var(highlight-fg);
+  background: var(pane-bg);
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+
+/* gitlight: branches */
+
+.gitlight-branches {
+  overflow: scroll;
+}
+
+.gitlight-branches table td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.gitlight-branches table td.pull button  {
+  background-color: #367bc9;
+}
+
+.gitlight-branches table td.merge button  {
+  background-color: #114682;
+}
+
+.gitlight-branches table tr.current td.checkout button  {
+  background-color: #7e9100;
+}
+
+.gitlight-branches table tr.not-current td.checkout button  {
+  background-color: #005000;
+}
+
+.gitlight-branches table td.new-branch button  {
+  background-color: #007c00;
+}
+
+.gitlight-branches table td.push button  {
+  background-color: #c05623;
+}
+
+
+
+/* gitlight: diff */
+
+.gitlight-gutter {
+  width: 32px;
+}
+
+.gitlight-diff {
+  overflow: scroll;
+}
+
+.gitlight-log {
+  overflow: scroll;
+}
+
+.gitlight-log div.commit {
+  margin-bottom: 30px
+}
+
+.gitlight-log div.commit p {
+  color: #e9cd11;
+  font-weight: bold;
+}
+
+.gitlight-log div.commit p button.shasum {
+  /* background-color: #e9cd11; */
+  font-weight: bold;
+}
+
+.gitlight-diff table {
+  margin-bottom: 30px;
+}
+
+.gitlight-diff table tr.where td {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.gitlight-diff table tr.context {
+  background-color: #737373;
+}
+
+.gitlight-diff table tr.changes td.left {
+
+  background-color: #2964db;
+}
+
+.gitlight-diff table tr.changes td.right {
+  background-color: #468e2a;
+}
+
+div.added-line {
+  text-align: center;
+  color: greenyellow;
+}
+div.deleted-lines {
+  text-align: center;
+  color: red;
+}
+div.modified-line {
+  text-align: center;
+  color: orange;
+}
+
+
+/* gitlight: command history */
+
+
+.gitlight-command-history {
+  overflow: scroll;
+}
+
+.gitlight-command-history * th {
+  vertical-align: middle;
+  text-align: center;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.gitlight-command-history * td {
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.gitlight-command-history * textarea {
+  width: 32em;
+  height: 5em;
+}
+
+
+.gitlight-command-history * .success td {
+  background-color:#083813;
+}
+
+.gitlight-command-history * .error td {
+  background-color:#320707;
+}
+
+.gitlight-command-history * .spacer {
+  padding-top: 30px;
+}

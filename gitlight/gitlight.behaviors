@@ -1,0 +1,14 @@
+{:+ {:app [(:lt.objs.plugins/load-js "gitlight_compiled.js" true)
+           (:lt.objs.plugins/load-css "gitlight.css")
+           :lt.plugins.gitlight.status/init]
+     :editor [:lt.plugins.gitlight.status/refresh-git-status-on-save
+              :lt.plugins.gitlight.diff/refresh-diff-gutter-on-save]
+     :git-status-out [:lt.plugins.gitlight.status.back/git-status-out-failure-verbose]
+     :git-ignore-out [:lt.plugins.gitlight.history/history-out-success
+                      :lt.plugins.gitlight.history/history-out-error
+                      ;:lt.plugins.gitlight.git/dump-output-to-console
+                      ]
+     :gitlight-log-history [:lt.plugins.gitlight.history/history-out-success
+                            :lt.plugins.gitlight.history/history-out-error ]
+
+     }}

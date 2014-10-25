@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('fontawesome.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*
+===============================================================================
+  Layout
+-------------------------------------------------------------------------------
+*/
+
+/* View */
+
+.aleph-browser {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.aleph-browser .flex-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+
+/* Filter-lists */
+
+.aleph-browser .aleph-filter {
+  background-color: transparent;
+  flex-basis: 32%;
+}
+
+.aleph-browser .aleph-filter .filter-list {
+  padding: 0.5rem;
+}
+
+.aleph-browser .aleph-filter .filter-list > .flex-row {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aleph-browser .aleph-filter .filter-list input {
+  flex-basis: 100%;
+  margin: 0 0 0.25rem 0;
+  padding: 0.5rem;
+}
+
+.aleph-browser .aleph-filter .filter-list .reset {
+  flex-basis: 1.625rem;
+  margin-left: 0.25rem;
+  background: transparent;
+}
+
+.aleph-browser .aleph-filter .filter-list .button.reset:hover {
+  color: var(highlight-fg);
+  background: transparent !important;
+}
+
+.aleph-browser .aleph-filter .filter-list > ul {
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.aleph-browser .aleph-filter .filter-list > ul > li {
+  width: 100%;
+  margin: .25rem 0;
+  padding: 0.5rem;
+  word-wrap: break-word;
+  background: rgba(127, 127, 127, 0.16);
+}
+
+.aleph-browser .aleph-filter .filter-list > ul > li.selected {
+  background: rgba(127, 127, 127, 0.48);
+}
+
+.aleph-browser .aleph-filter .filter-list > ul > li.active-query {
+  background: var(accent-background);
+}
+
+.aleph-browser .aleph-filter .filter-list .mode-selection > .button {
+  margin: .25rem 0;
+  padding: 0.5rem 0;
+  text-align: center;
+  flex-basis: 48%;
+  background-color: var(inactive-bg);
+}
+
+.aleph-browser .aleph-filter .filter-list .mode-selection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aleph-browser .aleph-filter .filter-list .mode-selection > .button.current-mode {
+  background-color: var(highlight-bg);
+}
+
+
+/*
+===============================================================================
+  Typography
+-------------------------------------------------------------------------------
+*/
+
+.aleph-browser .aleph-filter .filter-list h2 {
+  font-size: 0.875rem;
+}
+
+.aleph-browser .aleph-filter .filter-list p {
+  font-size: 0.625rem;
+}
+
+.aleph-browser .aleph-filter .filter-list .reset {
+  color: var(placeholder-fg);
+  font-family: 'Font Awesome';
+  font-size: 14px;
+  text-align: center;
+  -webkit-font-feature-settings: 'liga';
+}
+
+
+/*
+===============================================================================
+  Fancification
+-------------------------------------------------------------------------------
+*/
+
+.aleph-browser .aleph-filter .filter-list > ul > li {
+  border-radius: 2px;
+}

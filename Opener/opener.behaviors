@@ -1,0 +1,34 @@
+{:+ {:app [(:lt.objs.plugins/load-js "opener_compiled.js" true)]
+     :lt.plugins.opener/settings
+     [
+      (:lt.plugins.opener/set-shell-command
+       :terminal
+       :mac
+       ["open" "{{path}}" "-a" "Terminal.app"])
+
+      (:lt.plugins.opener/set-shell-command
+       :open
+       :mac
+       ["open" "{{path}}"])
+
+      (:lt.plugins.opener/set-shell-command
+       :reveal
+       :mac
+       ["open" "-R" "{{path}}"])
+
+      (:lt.plugins.opener/set-shell-command
+       :terminal
+       :linux
+       ["gnome-terminal" "--working-directory" "{{path}}"])
+
+      (:lt.plugins.opener/set-shell-command
+       :open
+       :linux
+       ["xdg-open" "{{path}}"])
+
+      (:lt.plugins.opener/set-shell-command
+       :reveal
+       :linux
+       ["nautilus" "{{path}}"])]
+
+     :tree-item [:lt.plugins.opener/add-menu-items]}}
